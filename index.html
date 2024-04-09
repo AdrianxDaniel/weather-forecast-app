@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather Report</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h1 style="color: White;">Weather Report</h1>
+    </header>
+    <hr>
+    <main class="flex-row">
+        <section class="sidebar">
+            <section class="card">
+                <h3 class="card-header">Search for a City</h3>
+                <form id="userForm" class="card-body">
+                    <label class="form-label" for="city" style="font-size: 10px;">Don't mind the placeholder </label>
+                    <input name="city" id="city" type="text" class="form-input" placeholder="Lothlórien" />
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </section>
+            <section class="card">
+                <h3 class="card-header">Popular Cities</h3>
+                <section id="cityButtons" class="card-body">
+                    <button city="Copenhagen" class="btn">Copenhagen</button>
+                    <button city="Mexico City" class="btn">Mexico City</button>
+                    <button city="New York" class="btn">New York</button>
+                    <button city="San Diego" class="btn">San Diego</button>
+                    <button city="San Francisco" class="btn">San Francisco</button>
+                    <button city="Sydney" class="btn">Sydney</button>
+                </section>
+            </section>
+            <section class="card" id="search-history-section">
+                <h4 class="card-header">Search History</h4>
+                <div id="searchedHistory"></div>
+            </section>
+        </section>
+        <section id="weather-section" class="weather-section">
+            <h2><b> <span id="searchedCity"></span></b> Weather Report</h2>
+            <div id="daysWeather"></div>
+            <h3>Forcast for days ahead</h3>
+            <div id="forecastReports" class="forecast-row"></div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p style="color: white;">
+            &copy; Weather Report
+        </p>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/utc.min.js"
+    integrity="sha512-z84O912dDT9nKqvpBnl1tri5IN0j/OEgMzLN1GlkpKLMscs5ZHVu+G2CYtA6dkS0YnOGi3cODt3BOPnYc8Agjg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/script.js"></script>
+
+</html>
